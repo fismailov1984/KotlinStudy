@@ -1,24 +1,15 @@
 package lesson1
 
+const val TIME_CONST: Int = 60
 fun main(){
 
     val secondsInSpace: Short = 6480
-    val seconds: Int = secondsInSpace % 60
-    val hour: Int = secondsInSpace / (60 * 60)
-    val minutes: Int = secondsInSpace % (60 * 60) / 60
+    val seconds: Int = secondsInSpace % TIME_CONST
+    val hour: Int = secondsInSpace / (TIME_CONST * TIME_CONST)
+    val minutes: Int = secondsInSpace % (TIME_CONST * TIME_CONST) / TIME_CONST
 
-    val arrayList = arrayListOf(hour.toString(), minutes.toString(), seconds.toString())
-    val list = mutableListOf<String>()
-
-    arrayList.forEach {
-        if(it.length < 2){
-            val t = "0$it"
-            list.add(t)
-        }else{
-            val t = it
-            list.add(t)
-        }
-    }
-    println(list.joinToString(":"))
-
+    printTime(hour, minutes, seconds)
+}
+fun printTime(h: Int, m: Int, s: Int){
+    println(String.format("%02d:%02d:%02d", h, m, s))
 }
