@@ -4,10 +4,18 @@ fun main(){
     val maidenName: String = "Татьяна"
     val surname: String = "Сергеевна"
     val firstName: String = "Сидорова"
-    val age1: Int = 20
-    val age2: Int = 22
+    var age: Int = 20
 
-    println("FIO: $lastName $maidenName $surname, Age: $age1")
-    println("FIO: $lastName $firstName $surname, Age: $age2")
+    getPersonalData(lastName, maidenName, surname, firstName, age)
 
+    age = 22
+    getPersonalData(lastName, maidenName, surname, firstName, age)
+}
+
+fun getPersonalData(lastName: String, maidenName: String, surname: String, firstName: String, age: Int){
+    if(age >= 22){
+        println("$firstName $maidenName $surname, $age")
+    }else{
+        println("$lastName $maidenName $surname, $age")
+    }
 }
