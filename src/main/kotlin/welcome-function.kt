@@ -7,9 +7,13 @@ fun main() {
     val formatter = SimpleDateFormat("k")
     val time = formatter.format(Date())
 
-    print("${greetings(time)} $userName")
-}
-fun greetings(time: String): String {
-    return if (time.toInt() in 0..<16) "Good day"
-    else "Good evening"
+    val greeting: String
+
+    if(time.toInt() in 0..16) {
+        greeting = "Good day"
+    }else{
+        greeting = "Good evening"
+    }
+    println("$greeting $userName")
+
 }
