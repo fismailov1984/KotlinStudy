@@ -15,7 +15,10 @@ fun main() {
     when {
         count == 2 -> println("Congratulations! You have won the grand prize!")
         count == 1 -> println("You have won a consolation prize!")
-        else -> println("You didn't win anything, try again...")
+        else -> println(
+            "You didn't win anything, try again...\n" +
+                    "Numbers needed to win: $FIRST_NUMBER and $SECOND_NUMBER"
+        )
     }
 
 }
