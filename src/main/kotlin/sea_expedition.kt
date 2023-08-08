@@ -1,4 +1,4 @@
-fun main(){
+fun main() {
 
     print("ship hull damage: ")
     val shipHullDamage: Boolean = readln().toBoolean()
@@ -15,13 +15,13 @@ fun main(){
         weatherConditions to true,
     )
 
-    if(currentCrew == 70) map[currentCrew] = true else map[currentCrew] = false
-    if(numberBoxes > 50) map[numberBoxes] = true else map[numberBoxes] = false
-    if(weatherConditions) map[weatherConditions] = true else map[weatherConditions] = false
+    if (currentCrew == 70) map[currentCrew] = true else map[currentCrew] = false
+    if (numberBoxes > 50) map[numberBoxes] = true else map[numberBoxes] = false
+    if (weatherConditions) map[weatherConditions] = true else map[weatherConditions] = false
 
-    if(false in map.values){
+    if (false in map.values) {
         println("ship can't sail")
-    } else{
+    } else {
         println("the ship can sail")
     }
 
