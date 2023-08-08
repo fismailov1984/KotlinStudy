@@ -1,4 +1,4 @@
-fun main(){
+fun main() {
 
     val day: Int = 5
     val exercise = "exercises of the"
@@ -9,8 +9,8 @@ fun main(){
         "press" to 1,
     )
 
-    for(i in mapMutableList){
-            println("$exercise ${i.key}: ${(day % 2 == 1)&&(i.value == 1)||(day % 2 == 0)&&(i.value == 2)}")
-        }
+    for (i in mapMutableList) {
+        println("$exercise ${i.key}: ${(day % 2 == 1) && (i.value == 1) || (day % 2 == 0) && (i.value == 2)}")
     }
+}
 
