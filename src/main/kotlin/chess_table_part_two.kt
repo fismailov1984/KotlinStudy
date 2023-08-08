@@ -1,13 +1,11 @@
-fun main(){
+fun main() {
 
-    var moveChess = "D2-D4;0"
+    val moveChess = "D2-D4;0"
     val startPoint: String
     val endPoint: String
     val number: String
 
-    moveChess = moveChess.replace("-",",").replace(";", ",")
-
-    val list = moveChess.split(",").toMutableList()
+    val list = moveChess.split("[-;]".toRegex())
 
     startPoint = list[0]
     endPoint = list[1]
@@ -16,4 +14,5 @@ fun main(){
     println("Start point: $startPoint")
     println("End point: $endPoint")
     println("move number: $number")
+
 }
