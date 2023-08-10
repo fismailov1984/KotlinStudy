@@ -11,7 +11,7 @@ fun main() {
         "arms" to 1,
         "legs" to 2,
         "back" to 2,
-        "press" to 1,
+        "press" to 1
     )
 
     for (i in mapMutableList) {
