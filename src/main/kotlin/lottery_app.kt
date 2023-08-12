@@ -12,9 +12,9 @@ fun main() {
     if (firstNumber == SECOND_NUMBER || secondNumber == SECOND_NUMBER) {
         count += 1
     }
-    when {
-        count == 2 -> println("Congratulations! You have won the grand prize!")
-        count == 1 -> println("You have won a consolation prize!")
+    when (count) {
+        2 -> println("Congratulations! You have won the grand prize!")
+        1 -> println("You have won a consolation prize!")
         else -> println(
             "You didn't win anything, try again...\n" +
                     "Numbers needed to win: $FIRST_NUMBER and $SECOND_NUMBER"
@@ -25,13 +25,13 @@ fun main() {
 
 fun enterNumber(text: String): Int {
 
-    var Number: Int = 0
+    var number: Int = 0
 
     var count = 0
     while (count < 1) {
         print("Enter $text number in the range 1..100: ")
-        Number = readln().toInt()
-        if (Number > 100 || Number == 0) count = 0 else count++
+        number = readln().toInt()
+        if (number > 100 || number == 0) count = 0 else count++
     }
-    return Number
+    return number
 }
